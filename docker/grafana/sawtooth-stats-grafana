@@ -21,8 +21,5 @@ COPY grafana/grafana.ini /etc/grafana
 
 
 WORKDIR /app
-RUN ["pwd"]
-
 COPY grafana/grafana_entrypoint.sh ./
 ENTRYPOINT ["/app/grafana_entrypoint.sh"]
-USER root
