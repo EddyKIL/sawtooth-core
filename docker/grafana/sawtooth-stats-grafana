@@ -24,7 +24,7 @@ WORKDIR /app
 RUN ["pwd"]
 
 COPY grafana/grafana_entrypoint.sh ./
-/bin/sh -c chmod u+x
+RUN chmod +x grafana_entrypoint.sh
 
 
 ENTRYPOINT ["/app/grafana_entrypoint.sh"]
