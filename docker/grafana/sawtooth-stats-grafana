@@ -25,4 +25,5 @@ WORKDIR /app
 COPY grafana/grafana_entrypoint.sh ./
 USER root
 RUN chmod +x ./grafana_entrypoint.sh
+USER grafana
 ENTRYPOINT ["/app/grafana_entrypoint.sh"]
